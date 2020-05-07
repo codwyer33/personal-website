@@ -1,0 +1,312 @@
+/* Basic styles */
+
+p{
+color:darkslategray;
+}
+button{
+    background-color: white;
+    border:1px solid #162447;
+    border-radius:3px;
+    color:#162447;
+    padding:7px 18px;
+    transition:color .2s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+button:hover{
+    background-color: #162447;
+    border:1px solid white;
+    color:white;
+
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h1{
+    font-size: 59px;
+}
+h2{
+    font-size: 50px;
+}
+hr{
+    /* color:#b6ade0; */
+    border-top:1px solid #b6ade0;
+}
+
+.title-card{
+    height:300px;
+    width:300px;
+    text-align: center;
+    background-color: #162447;
+    color:white;
+    border-radius: 5px;
+    margin:auto;
+    padding-top:100px;
+    border-left:9px solid #b6ade0;
+    /* box-shadow: 8px 8px 10px #616368; */
+}
+
+.center-row{
+    margin-left:auto;
+}
+
+
+/* Navbar styles  #162447 */
+#logo-img{
+    width:60px;
+    height:60px;
+    object-fit: contain;
+}
+#header{
+    background-color: #162447;
+    opacity: 100%;
+    position:fixed;
+    width:100%;
+    padding:auto 50px;
+    z-index:200;
+}
+.navbar{
+    padding-right: 50px;
+    padding-left: 30px;
+}
+.navLink{
+    padding-right:100px;
+    /* color:red; */
+    transition:color .1s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.spacer{
+    height:40px;
+}
+
+/* Footer styles */
+#footer{
+    min-height:80px;
+    background-color:#b6ade0;
+}
+
+/* Home - intro */
+#intro-img{
+    max-height:600px;
+    max-width:600px;
+    object-fit: cover;
+    /* border-radius: 3px; */
+    display: inline-block;
+}
+
+#intro-text{
+    /* display: inline; */
+    margin-left:60px;
+    margin-top:190px;
+    margin-bottom:150px;
+}
+#intro-img-2{
+    /* max-height:600px; */
+    max-width:705px;
+    height:600px;
+    object-fit: cover;
+    display: inline-block;
+}
+#into-top-bar, #intro-btm-bar{
+    position: absolute; 
+    background-color: #162447;
+    border-radius: 9px;
+    z-index: 100;
+    height:5px;
+    width:200px;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+#into-top-bar{
+    animation-name: bar-right;
+    top:160px;
+    left:220px;
+}
+#intro-btm-bar{
+    animation-name: bar-left;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    top:290px;
+    right:100px;
+}
+
+Col{
+    padding-right:0;
+}
+
+/* Home - sec. 2 */
+#right-2{
+    padding:170px 170px;
+    padding-left:80px;
+}
+#left-2{
+    padding:150px;
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
+}
+#left-2-img{
+    /* object-fit: cover; */
+    height:160px;
+    width:160px;
+    padding-left: auto;
+    padding-right: auto;
+    color:#162447;
+    border-radius:100%;
+    /* background-color: #f7f7f7; */
+    /* box-shadow: 8px 7px 12px #616368; */
+}
+
+/* Gallery */
+.gal-img{
+    height:245px;
+    width:245px;
+    object-fit: cover;
+    position:static;
+    z-index:10;
+    animation-name: gal-effect-off;
+    animation-fill-mode: forwards;
+    animation-duration:1.5s;
+}
+.gal-img:hover{
+    /* -webkit-filter: grayscale(0%);
+    position:relative;
+    height:265px;
+    width:265px;
+    z-index:20; */
+    animation-name: gal-effect-on;
+    animation-fill-mode: forwards;
+    animation-duration:200ms;
+    animation-delay: 0;
+}
+#gallery h3{
+    text-align: right;
+    margin-right:130px;
+}
+
+/* Home - about */
+#about-img, #project-img{
+    max-height:510px;
+    /* width:400px; */
+    /* border-radius: 100%; */
+    object-fit: cover;
+}
+#left-3, #left-project{
+    text-align: center;
+    padding:100px;
+}
+#right-3, #right-project{
+    text-align: right;
+}
+
+/* Project listings */
+.project-img{
+    height:500px;
+    width:500px;
+    object-fit: cover;
+    /* margin:auto; */
+    border-radius:3px;
+    /* border:6px solid #162447; */
+}
+.project-left{
+    padding-left:100px;
+    text-align:center;
+}
+.project-right{
+    margin:auto;
+    padding-right:120px;
+    padding-left:120px;
+}
+
+
+/* Home - contact */
+#contact-col{
+    text-align: center;
+}
+#contact-col-btn{
+    margin:20px;
+}
+
+
+/* Animations */
+@keyframes bar-right{
+    from {left:220px}
+    to {left:800px}
+}
+@keyframes bar-left{
+    from {right:100px}
+    to {right:600px}
+}
+@keyframes gal-effect-on{
+    from{
+        -webkit-filter: grayscale(90%);
+        opacity:70%;
+        /* height:245px;
+        width:245px;
+        position:static; */
+    }
+    to {
+        -webkit-filter: grayscale(0%);
+        opacity:100%;
+
+        /* height:260px;
+        width:260px;
+        position:absolute; */
+    }
+}
+@keyframes gal-effect-off{
+    from{
+        -webkit-filter: grayscale(0%);
+        opacity:100%;
+
+        /* height:260px;
+        width:260px; */
+    }
+    to {
+        -webkit-filter: grayscale(90%);
+        opacity:70%;
+
+        /* height:245px;
+        width:245px; */
+    }
+}
+
+/* Footer */
+#footer-left a{
+    padding: 20px;
+    color:white;
+}
+#footer-left a:hover{
+    color:white;
+}
+#footer-left{
+    text-align:center;
+    margin-top:70px;
+    margin-bottom:70px;
+
+}
+#mail-box{
+    width:50px;
+    height:50px;
+    border-radius: 3px;
+    background-color:white;
+    text-align:center;
+}
+.fas{
+    color:blue;
+}
+
+/* Animation stuff 
+/* @keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+  
+  /* The element to apply the animation to 
+  #footer {
+   
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+  } */
